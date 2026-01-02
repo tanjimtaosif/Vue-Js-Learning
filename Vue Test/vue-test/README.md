@@ -1,38 +1,66 @@
-# vue-test
+# Vue Jobs - Developer Listing Portal
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, responsive job board application built with **Vue 3** and **Tailwind CSS**. This project serves as a platform to browse, view details, and manage Vue.js job opportunities.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Features
 
-## Recommended Browser Setup
+* **Dynamic Job Grid**: Fetches and renders job listings from a centralized JSON data source.
+* **Show More/Less Logic**: Intelligent description truncation that allows users to toggle full text visibility.
+* **Component-Based Architecture**: Highly reusable UI components including customizable Cards and Buttons.
+* **Responsive Design**: Built with a mobile-first approach using Tailwind CSS.
+* **Prop-Driven Customization**: Sections like the Hero and Job Listings can be adjusted via props (e.g., limiting the number of jobs displayed).
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+---
 
-## Customize configuration
+## 🛠️ Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* **Framework:** [Vue.js 3](https://vuejs.org/) (Composition API with `<script setup>`)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Icons:** [PrimeIcons](https://primefaces.org/primeicons/) (Recommended for the location marker)
 
-## Project Setup
 
-```sh
+
+---
+
+## 📂 Project Structure
+
+* `src/components/`
+    * `Navbar.vue`: Top navigation with branding and links.
+    * `Hero.vue`: Main banner with dynamic title and subtitle props.
+    * `Card.vue`: A wrapper component using slots for flexible layout.
+    * `JobListing.vue`: Individual job cards with "read more" logic.
+    * `JobListings.vue`: The container that loops through the job data.
+* `src/jobs.json`: The "database" containing job titles, descriptions, and company details.
+* `App.vue`: The master layout combining all components.
+
+---
+
+## 🔧 Project Setup
+
+### 1. Installation
+```
 npm install
+
+```
+### 2. Install Additional Dependencies (Vue Router & Icons)
+```
+npm install vue-router@4 primeicons
+
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+### 3. Run Development Server
+```
 npm run dev
+
 ```
-
-### Compile and Minify for Production
-
-```sh
+### 4. Build for Production
+```
 npm run build
+
 ```
+
+## Component Usage Example
+*
