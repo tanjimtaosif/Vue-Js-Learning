@@ -61,6 +61,13 @@ npm run dev
 npm run build
 
 ```
-
-## Component Usage Example
-*
+---
+## 📝 Component Usage Example
+* The Card component uses a slot to allow any content to be injected into a styled box:)
+```
+<Card bg="bg-green-100">
+  <h2>Title</h2>
+  <p>Content goes here.</p>
+</Card>
+```
+---
