@@ -14,7 +14,7 @@ import { ref } from 'vue';
       } else if (status.value === 'pending'){
         status.value = 'inactive';
       } else {
-        status.value = 'actives'
+        status.value = 'active'
       }
     };
 
@@ -25,6 +25,9 @@ import { ref } from 'vue';
       }
     };
 
+    const deleteTask = (index) => {
+      tasks.value.splice(index, 1);
+    }
 </script>
 
 <template>
@@ -41,7 +44,10 @@ import { ref } from 'vue';
 
 <h2>Tasks:</h2>
 <ul>
-  <li v-for="task in tasks" :key="task">{{ task }}</li>
+  <li v-for="(task, index) in tasks" :key="index">
+  <span>{{ task }}</span>
+  <button @click="deleteTask(index)">x</button>
+</li>
 </ul>
 
 <a v-bind:href="link">CLick for Google</a> <br>
