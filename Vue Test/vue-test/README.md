@@ -71,3 +71,9 @@ npm run build
 </Card>
 ```
 ---
+## 💡 IDE Setup 
+* **Editor: ** VS Code
+* **Extension: ** Vue - Official (Volar)
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **Icons:** [PrimeIcons](https://primefaces.org/primeicons/) (Recommended for the location marker)
+
