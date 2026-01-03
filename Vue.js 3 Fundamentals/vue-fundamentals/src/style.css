@@ -1,3 +1,4 @@
+/* --- Global Body & Container Styles --- */
 body {
   background: #eff8ff;
   height: 100vh;
@@ -11,12 +12,6 @@ body {
   padding: 0;
 }
 
-.counter {
-  font-size: 0.8rem;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 #app {
   background: #fff;
   padding: 2rem;
@@ -27,29 +22,105 @@ body {
   max-width: 900px;
 }
 
-h1 {
-  color: #3d4852;
+/* --- Header Section --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
+h1 {
+  color: #3d4852;
+  margin: 0;
+}
+
+/* --- Form Alignment Fixes --- */
+.add-item-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap to next row */
+  gap: 15px;       /* Adds breathing room between input and priority */
+}
+
+.add-item-form input[type="text"] {
+  flex: 1;         /* Input takes up remaining space on the top row */
+  min-width: 250px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f8;
+  color: #606f7b;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Fixes the "Priority" clashing seen in your screenshot */
+.add-item-form div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between "Priority:" text and checkbox */
+  color: #606f7b;
+}
+
+.add-item-form label {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between checkbox and "High Priority" text */
+  cursor: pointer;
+}
+
+/* Button Row Fix */
+.add-item-form .btn {
+  flex-basis: 100%; /* Forces button to its own row */
+  margin-top: 10px;
+  padding: 0.75rem;
+}
+
+/* --- Buttons --- */
+.btn {
+  border: none;
+  border-radius: 4px; /* Slightly more rounded for the bigger size */
+  cursor: pointer;
+  font-size: 1rem;    /* Increased from 0.9rem to 1rem */
+  font-weight: 600;   /* Added weight to make text clearer */
+  padding: 0.75rem 1.5rem; /* Increased padding for a larger hit area */
+  letter-spacing: 0.5px;
+  transition: all 0.1s ease-in;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #6cb2eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #3490dc;
+}
+
+.btn-primary:disabled {
+  background: #8795a1;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  background: #ef5753;
+  color: #fff;
+}
+
+/* --- List Styles --- */
 ul {
   list-style: none;
   padding: 0;
+  margin-top: 2rem;
 }
 
-a {
-  color: #6cb2eb;
-  font-size: 1.25rem;
-  transition: all 0.1s ease-in;
-  margin-top: 0.5rem;
-  display: block;
-}
-
-a:hover {
-  color: #3490dc;
-}
-
-li,
-p {
+li {
   display: flex;
   align-items: center;
   line-height: 1.75;
@@ -64,106 +135,19 @@ li:hover {
   color: #22292f;
 }
 
-li input {
-  margin: 0 0.5rem 0;
-}
-
-#shopping-list > input,
-#shopping-list > select {
-  width: 100%;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #f1f5f8;
-  color: #606f7b;
-  padding: 0.5rem 0.75rem;
-  box-sizing: border-box;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  margin: 0.5rem 0;
-}
-
-.add-item-form,
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allows items to move to a new row */
-  gap: 10px;       /* Adds spacing between items when they wrap */
-}
-
-.add-item-form input {
-  width: 60%; /* Slightly reduced to ensure the checkbox fits on the same line */
-  border-radius: 3px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid #f1f5f8;
-  color: #606f7b;
-  padding: 0.5rem 0.75rem;
-  box-sizing: border-box;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  margin: 0.5rem 0;
-}
-
-/* This forces the button to start on a new row */
-.add-item-form .btn {
-  flex-basis: 100%; /* Tells the button to take up 100% of the width */
-  margin-top: 10px;
-}
-
-.btn {
-  border: none;
-  border-radius: 3px;
-  margin: auto 0;
-  padding: 0.5rem 0.75rem;
-  flex-shrink: 0;
-  cursor: pointer;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  transition: all 0.1s ease-in;
-  margin-top: 10px;
-}
-
-.btn[disabled] {
-  background: #8795a1;
-}
-
-.btn[disabled]:hover {
-  background: #606f7b;
-}
-
-.btn-primary {
-  background: #6cb2eb;
-  color: #fff;
-}
-
-.btn-primary:hover {
-  background: #3490dc;
-}
-
-.btn-cancel {
-  background: #ef5753;
-  color: #fff;
-}
-
-.btn-cancel:hover {
-  background: #e3342f;
-  color: #fff;
-}
-
 .strikeout {
   text-decoration: line-through;
   color: #b8c2cc;
 }
 
-.strikeout:hover {
-  color: #8795a1;
-}
-
 .priority {
   color: #de751f;
+  font-weight: 600;
 }
-input[type="checkbox"]{
-  display: inline !important;
-  box-shadow: none;
+
+/* --- Checkbox Reset --- */
+input[type="checkbox"] {
+  margin: 0;
   width: auto;
+  box-shadow: none;
 }
