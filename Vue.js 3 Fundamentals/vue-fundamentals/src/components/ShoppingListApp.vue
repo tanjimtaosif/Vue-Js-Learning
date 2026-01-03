@@ -1,7 +1,15 @@
 <script setup>
-import {ref} from 'vue'
+import {ref, computed} from 'vue'
+
+// const characterCount = computed(() =>{
+//     return newItem.value.length
+// })
 
 const header = ref('Shopping List App')
+
+const reversedItems = computed(() =>[...items.value].reverse()
+)
+
 const items = ref ([
     {
         id:1, 
@@ -29,7 +37,9 @@ const items = ref ([
     }
 ])
 const newItem = ref("")
+
 const newItemHighPriority = ref(false)
+
 // newItem.value = "" by adding this part its clear the input filed after input
 const submitItems = () => {
     items.value.push(
@@ -44,6 +54,7 @@ const submitItems = () => {
 } 
 
 const editing = ref(false)
+
 const doEdit = (e) =>{
     editing.value = e
     newItem.value = ""
@@ -82,9 +93,12 @@ v-if="editing"
         class="btn btn-primary ">Save Items</button>
     </div>
 </form>
+<!-- <p class="counter">
+    {{ characterCount }}/200
+</p> -->
 <ul>
     <li 
-    v-for="(item, index) in items" 
+    v-for="(item, index) in reversedItems" 
     :key="item.id"
     @click="togglePuchased(item)"
     class="static-class"
