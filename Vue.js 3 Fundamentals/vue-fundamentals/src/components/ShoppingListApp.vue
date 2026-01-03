@@ -4,7 +4,7 @@ import {ref, computed} from 'vue'
 // const characterCount = computed(() =>{
 //     return newItem.value.length
 // })
-
+// Have to explore unshift
 const header = ref('Shopping List App')
 
 const reversedItems = computed(() =>[...items.value].reverse()
