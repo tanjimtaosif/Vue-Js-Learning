@@ -87,10 +87,12 @@ li input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to move to a new row */
+  gap: 10px;       /* Adds spacing between items when they wrap */
 }
 
 .add-item-form input {
-  width: 70%;
+  width: 60%; /* Slightly reduced to ensure the checkbox fits on the same line */
   border-radius: 3px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border: 1px solid #f1f5f8;
@@ -100,6 +102,12 @@ li input {
   font-size: 1rem;
   letter-spacing: 0.5px;
   margin: 0.5rem 0;
+}
+
+/* This forces the button to start on a new row */
+.add-item-form .btn {
+  flex-basis: 100%; /* Tells the button to take up 100% of the width */
+  margin-top: 10px;
 }
 
 .btn {
@@ -112,6 +120,7 @@ li input {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   transition: all 0.1s ease-in;
+  margin-top: 10px;
 }
 
 .btn[disabled] {
