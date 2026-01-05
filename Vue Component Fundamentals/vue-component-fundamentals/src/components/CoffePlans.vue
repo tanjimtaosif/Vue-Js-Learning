@@ -1,5 +1,10 @@
 <script setup>
-    defineProps(["name"])
+    defineProps({
+        name : {
+            type : String,
+            default : 'Default Plan'
+        }
+    })
 </script>
 
 <template>
