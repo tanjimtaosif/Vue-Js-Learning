@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import CoffePlans from './CoffePlans.vue';
+// import CoffePlans from './CoffePlans.vue';
 const plans = ref (["The Hacker","The Single","The Curious","The Addict" ]);
 </script>
 
