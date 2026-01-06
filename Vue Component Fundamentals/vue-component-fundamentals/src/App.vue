@@ -7,6 +7,10 @@ import PlanPicker from './components/PlanPicker.vue';
 
 <template>
   <!-- <CounterButton /> -->
+  <div class="content">
+  <h1 class="title">Coffee Plans</h1>
+  <h2 class="subtitle">We travel the world to source the very best single origin coffee for you</h2>
+  </div>
   <PlanPicker/>
 
 
