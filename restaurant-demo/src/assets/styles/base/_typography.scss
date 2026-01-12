@@ -1,7 +1,8 @@
+@use '../abstracts/variables' as vars;
 body {
-  font-family: $font-primary;
-  color: $color-white;
-  background-color: $color-black;
+  font-family: vars.$font-primary;
+  color: vars.$color-white;
+  background-color: vars.$color-black;
   line-height: 1.6;
 }
 
@@ -9,6 +10,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $font-heading;
+  font-family: vars.$font-heading;
   font-weight: 600;
 }
