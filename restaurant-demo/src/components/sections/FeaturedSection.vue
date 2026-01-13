@@ -58,12 +58,12 @@ const testimonials: Testimonial[] = [
 @use '@/assets/styles/abstracts/variables' as vars;
 
 .featured {
-  padding-block: vars.$space-xl;
+  padding-block: vars.$space-md;
 }
 
 .featured__header {
   max-width: 600px;
-  margin-bottom: vars.$space-xl;
+  margin-bottom: vars.$space-lg;
 }
 
 .featured__title {
