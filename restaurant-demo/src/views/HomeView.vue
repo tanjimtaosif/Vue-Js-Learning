@@ -1,8 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ExperienceSection from '@/components/sections/ExperienceSection.vue'
+import FeaturedSection from '@/components/sections/FeaturedSection.vue'
+import HeroSection from '@/components/sections/HeroSection.vue'
+import MarqueeSection from '@/components/sections/MarqueeSection.vue'
+import NewsletterSection from '@/components/sections/NewsletterSection.vue'
+import StorySection from '@/components/sections/StorySection.vue'
+</script>
 
 <template>
   <section>
-    <h1>Home View Loaded</h1>
-    <p>This confirms routing works.</p>
+    <HeroSection />
+    <MarqueeSection />
+    <ExperienceSection />
+    <StorySection />
+    <FeaturedSection />
+    <NewsletterSection />
   </section>
 </template>
