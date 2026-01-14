@@ -52,7 +52,7 @@ const experiences: Experience[] = [
 @use '@/assets/styles/abstracts/variables' as vars;
 
 .experience {
-  padding-block: vars.$space-xl;
+  padding-block: vars.$space-md;
 }
 
 .experience__grid {
