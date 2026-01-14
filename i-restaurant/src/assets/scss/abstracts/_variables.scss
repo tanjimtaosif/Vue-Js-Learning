@@ -1,0 +1,29 @@
+:root {
+// Brand
+  --color-primary: #6c4dff;
+  --color-primary-dark: #5538e0;
+  --color-secondary: #1b1b2b;
+
+    /* Neutral */
+  --color-black: #0b0b12;
+  --color-white: #ffffff;
+  --color-gray-100: #f5f6fa;
+  --color-gray-300: #cfd3ff;
+  --color-gray-500: #9fa3c8;
+  --color-gray-700: #5a5f8a;
+
+  /* Typography */
+  --font-primary: 'Inter', system-ui, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 1.5rem;
+
+   /* UI */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --transition-base: all 0.25s ease-in-out;
+}
