@@ -17,9 +17,10 @@ const ctaText = 'Explore More'
 
       <!-- Content -->
       <div class="story__content">
-        <div class="story__content">
+        <h2 class="story__title">
           {{ Title }}
-        </div>
+        </h2>
+
         <p class="story__description">
           {{ description }}
         </p>
@@ -50,7 +51,6 @@ const ctaText = 'Explore More'
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
-
 }
 
 .story__media img {
@@ -64,15 +64,26 @@ const ctaText = 'Explore More'
 }
 
 .story__title {
-  font-size: 2.5rem;
+  font-size: clamp(2.2rem, 4vw, 2.75rem);
   margin-bottom: vars.$space-md;
+  line-height: 1.2;
+  position: relative;
 }
 
+.story__title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: vars.$color-gold;
+  margin-top: vars.$space-sm;
+}
 .story__description {
   font-size: 1rem;
   color: vars.$color-gray;
   margin-bottom: vars.$space-lg;
   line-height: 1.8;
+  max-width: 55ch;
 }
 
 .story__cta {
