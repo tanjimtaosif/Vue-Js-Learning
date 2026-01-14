@@ -27,29 +27,37 @@ function handleSubmit() {
 @use '@/assets/styles/abstracts/variables' as vars;
 
 .newsletter {
-  padding-block: vars.$space-md;
+  padding-block: clamp(3rem, 8vw, 6rem);
   display: flex;
   justify-content: center;
 }
 
 .newsletter__box {
   background: linear-gradient(135deg, vars.$color-gold, #9f8d69);
-  padding: vars.$space-xl;
-  border-radius: vars.$radius-md;
-  max-width: 700px;
+
+  /* Wider visual presence */
+  max-width: 960px;
   width: 100%;
+
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: vars.$radius-md;
   text-align: center;
+
+  /* Subtle depth */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .newsletter__title {
   color: vars.$color-black;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   margin-bottom: vars.$space-sm;
 }
 
 .newsletter__subtitle {
   color: rgba(0, 0, 0, 0.75);
-  margin-bottom: vars.$space-md;
+  max-width: 50ch;
+  margin-inline: auto;
+  margin-bottom: vars.$space-lg;
 }
 
 .newsletter__form {
@@ -60,14 +68,16 @@ function handleSubmit() {
 }
 
 .newsletter__form input {
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   border-radius: vars.$radius-sm;
   border: none;
-  min-width: 260px;
+  min-width: 280px;
+  flex: 1;
+  max-width: 360px;
 }
 
 .newsletter__form button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   background-color: vars.$color-black;
   color: vars.$color-white;
   border: none;
