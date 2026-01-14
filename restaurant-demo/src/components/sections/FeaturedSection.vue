@@ -93,7 +93,7 @@ const testimonials: Testimonial[] = [
 
 .featured__card {
   background-color: vars.$color-dark;
-  padding: vars.$space-lg;
+  padding: vars.$space-md;
   border-radius: vars.$radius-md;
 }
 
