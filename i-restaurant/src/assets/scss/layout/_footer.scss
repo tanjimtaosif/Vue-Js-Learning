@@ -1,0 +1,11 @@
+.app-footer{
+  padding: 3rem 0;
+  margin-top: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  &__copy {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray-500);
+  }
+}
