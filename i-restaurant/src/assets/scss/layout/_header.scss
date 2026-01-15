@@ -1,0 +1,37 @@
+.app-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-gray-100);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    color: var(--color-black);
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      font-size: 0.95rem;
+      color: var(--color-gray-700);
+      transition: var(--transition-base);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+  }
+}
