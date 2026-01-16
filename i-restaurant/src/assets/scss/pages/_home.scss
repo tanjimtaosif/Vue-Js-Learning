@@ -1,0 +1,227 @@
+.hero {
+  background-color: var(--color-white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__stage {
+    position: relative;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 6rem 0 0;
+    overflow: visible;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 75%;
+      background: linear-gradient(180deg, #ffffff 0%, #cecef6 35%, #c1bff9 65%, #d6d5fc 100%);
+      border-radius: 0 0 50px 50px;
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: clamp(2.75rem, 4vw, 3.75rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--color-indigo);
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-gray-700);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  &__preview {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -100px;
+  }
+
+  &__media {
+    width: 100%;
+    max-width: var(--container-width);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 40px 80px rgba(108, 77, 255, 0.3);
+  }
+
+  &__video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// Featured section
+
+.features-showcase {
+  padding: 12rem 0 7rem;
+  background-color: var(--color-white);
+  position: relative;
+
+  &__header {
+    max-width: 720px;
+    margin: 0 auto 5rem;
+    text-align: center;
+  }
+
+  &__pill {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: rgba(108, 77, 255, 0.12);
+    border-radius: 999px;
+  }
+
+  &__title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--color-black);
+  }
+
+  &__subtitle {
+    font-size: 1.05rem;
+    color: var(--color-gray-700);
+  }
+  // grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+// Feature card
+.feature {
+  padding: 2.5rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius-md);
+  min-height: 220px;
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-black);
+  }
+
+  &__text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray-700);
+  }
+
+  /* Wide card (top left) */
+  &--wide {
+    grid-column: span 2;
+  }
+
+  /* Highlight card (top right) */
+  &--highlight {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-white);
+
+    .feature__title,
+    .feature__text {
+      color: var(--color-white);
+    }
+  }
+}
+
+/* =========================
+   FEATURE DETAILS SECTION
+   ========================= */
+
+.feature-details {
+  padding: 7rem 0;
+  background-color: var(--color-white);
+}
+
+/* Feature detail row */
+
+.feature-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    max-width: 520px;
+  }
+
+  &__title {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-gray-700);
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__mock {
+    width: 100%;
+    max-width: 520px;
+    height: 320px;
+    border-radius: var(--border-radius-lg);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  /* Reverse layout */
+  &--reverse {
+    grid-template-columns: 1fr 1fr;
+
+    .feature-detail__content {
+      order: 2;
+    }
+
+    .feature-detail__media {
+      order: 1;
+    }
+  }
+}
