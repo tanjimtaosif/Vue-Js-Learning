@@ -80,7 +80,7 @@
 // Featured section
 
 .features-showcase {
-  padding: 12rem 0 7rem;
+  padding: 12rem 0 5rem;
   background-color: var(--color-white);
   position: relative;
 
@@ -156,9 +156,118 @@
   }
 }
 
-/* =========================
-   FEATURE DETAILS SECTION
-   ========================= */
+// Comparison Section
+.comparison {
+  padding: 7rem 0;
+  background-color: var(--color-white);
+
+  &__header {
+    max-width: 720px;
+    margin: 0 auto 5rem;
+    text-align: center;
+  }
+
+  &__pill {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    background-color: rgba(108, 77, 255, 0.12);
+    border-radius: 999px;
+  }
+
+  &__title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--color-black);
+  }
+
+  &__subtitle {
+    font-size: 1.05rem;
+    color: var(--color-gray-700);
+  }
+
+  /* =========================
+     TABLE
+     ========================= */
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1.4fr 1.35fr 1fr 1fr; // middle column wider
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  &__column {
+    background-color: var(--color-gray-100);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    text-align: center;
+    padding: 0.25rem 0; // slightly smaller by default
+
+    &--labels {
+      background: transparent;
+      text-align: left;
+      padding-top: 3.25rem;
+    }
+
+    &--primary {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: var(--color-white);
+      box-shadow: 0 24px 60px rgba(108, 77, 255, 0.35);
+      padding: 0.75rem 0; // taller, not popped
+    }
+  }
+
+  &__head {
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  &__cell {
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--check {
+      color: #4caf50;
+      font-weight: 600;
+    }
+
+    &--cross {
+      color: #b0b0b0;
+    }
+  }
+
+  /* Primary column overrides */
+  &__column--primary {
+    .comparison__cell {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .comparison__cell--check {
+      color: #ffffff;
+    }
+
+    .comparison__cell--cross {
+      color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  /* Non-primary columns slightly calmer */
+  &__column:not(.comparison__column--primary):not(.comparison__column--labels) {
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Feature Details Section */
 
 .feature-details {
   padding: 7rem 0;
