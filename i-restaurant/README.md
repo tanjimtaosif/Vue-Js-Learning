@@ -78,8 +78,9 @@ The project uses a premium design system with CSS custom properties:
 - **Typography**: `Inter` font with optimized letter-spacing and fluid font sizes.
 - **Effects**:
   - `Glassmorphism`: Backdrop blur and translucent backgrounds.
-  - `Gradients`: Smooth color transitions for buttons and borders.
+  - `Gradients`: Premium mesh gradients and smooth color transitions.
   - `Shadows`: Multi-layered shadows for depth (`--shadow-lg`, `--shadow-glow`).
+  - `Animations`: Scroll-triggered entrance animations (`useScrollReveal`) and floating elements.
 - **Components**:
   - `Buttons`: Ripple effects, hover lifts, and gradient variants.
   - `Cards`: Elevated, glass, and interactive states.
