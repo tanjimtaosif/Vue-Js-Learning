@@ -1,17 +1,22 @@
 :root {
-// Brand
+  /* Brand */
   --color-primary: #6c4dff;
-  --color-indigo: #6a65ff;
+  --color-primary-light: #8f75ff;
   --color-primary-dark: #5538e0;
+  --color-indigo: #6a65ff;
   --color-secondary: #1b1b2b;
+  --color-accent: #ff6b9d;
 
-    /* Neutral */
+  /* Neutral */
   --color-black: #0b0b12;
   --color-white: #ffffff;
+  --color-gray-50: #fafbfc;
   --color-gray-100: #f5f6fa;
+  --color-gray-200: #e8eaf3;
   --color-gray-300: #cfd3ff;
   --color-gray-500: #9fa3c8;
   --color-gray-700: #5a5f8a;
+  --color-gray-900: #2a2d45;
 
   /* Typography */
   --font-primary: 'Inter', system-ui, sans-serif;
@@ -22,10 +27,32 @@
   --container-width: 1200px;
   --container-padding: 1.5rem;
 
-   /* UI */
-  --border-radius-sm: 6px;
-  --border-radius-md: 12px;
-  --border-radius-lg: 20px;
+  /* UI */
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 22px;
+  --border-radius-xl: 32px;
   --transition-base: all 0.25s ease-in-out;
-}
+  --transition-fast: all 0.15s ease;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(108, 77, 255, 0.06);
+  --shadow-md: 0 8px 24px rgba(108, 77, 255, 0.1);
+  --shadow-lg: 0 16px 48px rgba(108, 77, 255, 0.15);
+  --shadow-xl: 0 24px 64px rgba(108, 77, 255, 0.2);
+  --shadow-glow: 0 0 40px rgba(108, 77, 255, 0.25);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  );
+  --gradient-hero: linear-gradient(180deg, #ffffff 0%, #cecef6 35%, #c1bff9 65%, #d6d5fc 100%);
+  --gradient-glass: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+}
