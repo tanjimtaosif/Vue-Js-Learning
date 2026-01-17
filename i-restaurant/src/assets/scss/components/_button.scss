@@ -1,0 +1,102 @@
+/* ===============================
+   Premium Button Styles
+================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+
+  /* Ripple effect base */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.6s ease,
+      height 0.6s ease;
+  }
+
+  &:active::before {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Primary Button */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Ghost Button */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-200);
+
+  &:hover {
+    background: var(--color-gray-100);
+    border-color: var(--color-gray-300);
+    transform: translateY(-1px);
+  }
+}
+
+/* Secondary Button */
+.btn--secondary {
+  background: var(--color-gray-100);
+  color: var(--color-black);
+
+  &:hover {
+    background: var(--color-gray-200);
+    transform: translateY(-1px);
+  }
+}
+
+/* Large Button */
+.btn--lg {
+  padding: 1.1rem 2.25rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius-lg);
+}
+
+/* Small Button */
+.btn--sm {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* Icon Button */
+.btn--icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+}
