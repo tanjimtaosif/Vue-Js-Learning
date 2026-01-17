@@ -1,8 +1,21 @@
+/* ===============================
+   App Header
+================================ */
+
 .app-header {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--color-gray-100);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    backdrop-filter 0.3s ease;
 
   &__content {
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,8 +24,8 @@
   &__logo {
     font-weight: 700;
     font-size: 1.25rem;
-    letter-spacing: 0.5px;
     color: var(--color-black);
+    letter-spacing: 0.2px;
   }
 
   &__nav {
@@ -22,7 +35,8 @@
     a {
       font-size: 0.95rem;
       color: var(--color-gray-700);
-      transition: var(--transition-base);
+      position: relative;
+      transition: color 0.2s ease;
 
       &:hover {
         color: var(--color-primary);
@@ -33,5 +47,22 @@
   &__actions {
     display: flex;
     gap: 1rem;
+  }
+
+  /* ===============================
+     Sticky State
+  ================================ */
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   }
 }
