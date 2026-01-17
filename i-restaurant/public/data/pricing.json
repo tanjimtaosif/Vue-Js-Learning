@@ -1,0 +1,41 @@
+[
+  {
+    "id": "starter",
+    "name": "Starter",
+    "price": 19,
+    "billing": "month",
+    "description": "Perfect for small restaurants just getting started.",
+    "features": ["1 Website", "Mobile Responsive", "Basic SEO", "Menu Builder", "Email Support"],
+    "popular": false
+  },
+  {
+    "id": "pro",
+    "name": "Pro",
+    "price": 49,
+    "billing": "month",
+    "description": "Best for growing restaurants that want more conversions.",
+    "features": [
+      "Unlimited Pages",
+      "Online Ordering",
+      "Advanced SEO",
+      "Custom Branding",
+      "Priority Support"
+    ],
+    "popular": true
+  },
+  {
+    "id": "business",
+    "name": "Business",
+    "price": 99,
+    "billing": "month",
+    "description": "For restaurant chains & high-volume businesses.",
+    "features": [
+      "Multi-location Support",
+      "Custom Integrations",
+      "Analytics Dashboard",
+      "Dedicated Manager",
+      "24/7 Support"
+    ],
+    "popular": false
+  }
+]
