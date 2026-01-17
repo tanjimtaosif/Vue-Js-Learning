@@ -9,6 +9,11 @@
 @use 'base/base';
 @use 'base/typography';
 
+/* Components */
+@use 'components/button';
+@use 'components/card';
+@use 'components/badge';
+
 /* Layout */
 @use 'layout/container';
 @use 'layout/grid';
@@ -16,5 +21,4 @@
 @use 'layout/footer';
 
 /* Sections */
-
-@use 'pages/home'
+@use 'pages/home';
