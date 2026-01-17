@@ -3,609 +3,350 @@
     "id": 1,
     "name": "Rohan Mehta",
     "role": "Owner, Spice Hub",
-    "quote": "Irestaurant helped us launch a beautiful website in days. Online orders increased almost immediately."
+    "quote": "Irestaurant helped us launch a beautiful website in days. Online orders increased almost immediately.",
+    "rating": 3
   },
   {
     "id": 2,
     "name": "Sarah Johnson",
     "role": "Founder, Urban Bites",
-    "quote": "The layouts are perfect for restaurants. No tech headaches, just results."
+    "quote": "The layouts are perfect for restaurants. No tech headaches, just results.",
+    "rating": 4
   },
   {
     "id": 3,
     "name": "Daniel Kim",
     "role": "Manager, Pizza Corner",
-    "quote": "Fast, clean, and professional. Exactly what a restaurant business needs."
+    "quote": "Fast, clean, and professional. Exactly what a restaurant business needs.",
+    "rating": 4
   },
   {
     "id": 4,
     "name": "Amit Verma",
     "role": "Owner, Curry Leaf",
-    "quote": "Our online presence improved instantly. Customers love the new look."
+    "quote": "Our online presence improved instantly. Customers love the new look.",
+    "rating": 4
   },
   {
     "id": 5,
     "name": "Emily Carter",
     "role": "Co-Founder, Green Spoon",
-    "quote": "Setup was smooth and quick. The website looks premium."
+    "quote": "Setup was smooth and quick. The website looks premium.",
+    "rating": 5
   },
   {
     "id": 6,
     "name": "Luis Hernandez",
     "role": "Owner, Taco Fiesta",
-    "quote": "Online orders grew within the first week. Highly recommended."
+    "quote": "Online orders grew within the first week. Highly recommended.",
+    "rating": 5
   },
   {
     "id": 7,
     "name": "Neha Sharma",
     "role": "Owner, Tandoori Tales",
-    "quote": "Simple to manage and beautifully designed for restaurants."
+    "quote": "Simple to manage and beautifully designed for restaurants.",
+    "rating": 5
   },
   {
     "id": 8,
     "name": "Michael Brown",
     "role": "Manager, Burger Barn",
-    "quote": "Everything we needed, nothing we didn’t. Perfect solution."
+    "quote": "Everything we needed, nothing we didn’t. Perfect solution.",
+    "rating": 3
   },
   {
     "id": 9,
     "name": "Priya Nair",
     "role": "Founder, Coconut Coast",
-    "quote": "Our menu looks amazing online now. Customers noticed immediately."
+    "quote": "Our menu looks amazing online now. Customers noticed immediately.",
+    "rating": 5
   },
   {
     "id": 10,
     "name": "James Wilson",
     "role": "Owner, Smokehouse Grill",
-    "quote": "The ordering flow is smooth and intuitive. Great experience."
+    "quote": "The ordering flow is smooth and intuitive. Great experience.",
+    "rating": 4
   },
-
   {
     "id": 11,
     "name": "Ankit Patel",
     "role": "Partner, Street Chaat",
-    "quote": "Helped us go digital without stress. Clean and modern design."
+    "quote": "Helped us go digital without stress. Clean and modern design.",
+    "rating": 5
   },
   {
     "id": 12,
     "name": "Olivia Martinez",
     "role": "Owner, Fresh Fork",
-    "quote": "Our restaurant finally has a website we’re proud of."
+    "quote": "Our restaurant finally has a website we’re proud of.",
+    "rating": 4
   },
   {
     "id": 13,
     "name": "Rahul Singh",
     "role": "Owner, Royal Dine",
-    "quote": "Very easy to customize. Fits our brand perfectly."
+    "quote": "Very easy to customize. Fits our brand perfectly.",
+    "rating": 4
   },
   {
     "id": 14,
     "name": "Sophia Lee",
     "role": "Founder, Noodle House",
-    "quote": "Customers find us online more easily now."
+    "quote": "Customers find us online more easily now.",
+    "rating": 4
   },
   {
     "id": 15,
     "name": "David Miller",
     "role": "Owner, BBQ Junction",
-    "quote": "Great performance and fast loading on mobile."
+    "quote": "Great performance and fast loading on mobile.",
+    "rating": 5
   },
   {
     "id": 16,
     "name": "Kavita Iyer",
     "role": "Owner, South Spice",
-    "quote": "The design truly matches restaurant needs."
+    "quote": "The design truly matches restaurant needs.",
+    "rating": 4
   },
   {
     "id": 17,
     "name": "Ethan Walker",
     "role": "Manager, Downtown Deli",
-    "quote": "Clear layouts and smooth ordering experience."
+    "quote": "Clear layouts and smooth ordering experience.",
+    "rating": 5
   },
   {
     "id": 18,
     "name": "Suresh Rao",
     "role": "Owner, Coastal Flavors",
-    "quote": "Helped us attract new customers online."
+    "quote": "Helped us attract new customers online.",
+    "rating": 4
   },
   {
     "id": 19,
     "name": "Isabella Rossi",
     "role": "Founder, Bella Cucina",
-    "quote": "Elegant design that fits our Italian brand."
+    "quote": "Elegant design that fits our Italian brand.",
+    "rating": 4
   },
   {
     "id": 20,
     "name": "Chris Taylor",
     "role": "Owner, Urban Grill",
-    "quote": "Very practical and restaurant-focused platform."
+    "quote": "Very practical and restaurant-focused platform.",
+    "rating": 4
   },
-
   {
     "id": 21,
     "name": "Manoj Kulkarni",
     "role": "Owner, Spice Route",
-    "quote": "Our takeaway orders increased noticeably."
+    "quote": "Our takeaway orders increased noticeably.",
+    "rating": 5
   },
   {
     "id": 22,
     "name": "Hannah Moore",
     "role": "Co-Founder, Vegan Vibe",
-    "quote": "Minimal, modern, and easy to use."
+    "quote": "Minimal, modern, and easy to use.",
+    "rating": 4
   },
   {
     "id": 23,
     "name": "Arjun Malhotra",
     "role": "Owner, Delhi Darbar",
-    "quote": "Everything works smoothly without technical issues."
+    "quote": "Everything works smoothly without technical issues.",
+    "rating": 5
   },
   {
     "id": 24,
     "name": "Noah Anderson",
     "role": "Manager, City Cafe",
-    "quote": "Saved us time and money."
+    "quote": "Saved us time and money.",
+    "rating": 5
   },
   {
     "id": 25,
     "name": "Pooja Desai",
     "role": "Founder, Bowl Story",
-    "quote": "Customers love browsing our menu online."
+    "quote": "Customers love browsing our menu online.",
+    "rating": 3
   },
   {
     "id": 26,
     "name": "Lucas White",
     "role": "Owner, Sandwich Spot",
-    "quote": "Perfect for small restaurant businesses."
+    "quote": "Perfect for small restaurant businesses.",
+    "rating": 5
   },
   {
     "id": 27,
     "name": "Ritika Kapoor",
     "role": "Owner, Cafe Bloom",
-    "quote": "Professional look with zero complexity."
+    "quote": "Professional look with zero complexity.",
+    "rating": 5
   },
   {
     "id": 28,
     "name": "Benjamin Scott",
     "role": "Owner, Steak House",
-    "quote": "Strong foundation for online growth."
+    "quote": "Strong foundation for online growth.",
+    "rating": 4
   },
   {
     "id": 29,
     "name": "Vikram Joshi",
     "role": "Owner, Masala Magic",
-    "quote": "Easy updates and clean visuals."
+    "quote": "Easy updates and clean visuals.",
+    "rating": 3
   },
   {
     "id": 30,
     "name": "Emma Thompson",
     "role": "Founder, Brunch & Co.",
-    "quote": "Exactly what modern restaurants need."
+    "quote": "Exactly what modern restaurants need.",
+    "rating": 4
   },
-
   {
     "id": 31,
     "name": "Sanjay Khanna",
     "role": "Owner, Punjabi Tadka",
-    "quote": "Helped us compete with bigger brands."
+    "quote": "Helped us compete with bigger brands.",
+    "rating": 5
   },
   {
     "id": 32,
     "name": "Liam Harris",
     "role": "Manager, Corner Bistro",
-    "quote": "Reliable and easy to manage."
+    "quote": "Reliable and easy to manage.",
+    "rating": 5
   },
   {
     "id": 33,
     "name": "Meera Menon",
     "role": "Founder, Pure Plate",
-    "quote": "A great tool for showcasing our food."
+    "quote": "A great tool for showcasing our food.",
+    "rating": 4
   },
   {
     "id": 34,
     "name": "Daniel Clark",
     "role": "Owner, Fish Fry",
-    "quote": "Fast setup and smooth experience."
+    "quote": "Fast setup and smooth experience.",
+    "rating": 5
   },
   {
     "id": 35,
     "name": "Nikhil Bansal",
     "role": "Owner, Food Court Express",
-    "quote": "Very intuitive dashboard."
+    "quote": "Very intuitive dashboard.",
+    "rating": 5
   },
   {
     "id": 36,
     "name": "Ava Robinson",
     "role": "Co-Founder, Salad Stop",
-    "quote": "Design feels premium and fresh."
+    "quote": "Design feels premium and fresh.",
+    "rating": 5
   },
   {
     "id": 37,
     "name": "Ramesh Gupta",
     "role": "Owner, Highway Dhaba",
-    "quote": "Helped us reach highway travelers online."
+    "quote": "Helped us reach highway travelers online.",
+    "rating": 5
   },
   {
     "id": 38,
     "name": "Matthew Lewis",
     "role": "Owner, Pasta Place",
-    "quote": "Our brand looks more credible now."
+    "quote": "Our brand looks more credible now.",
+    "rating": 5
   },
   {
     "id": 39,
     "name": "Anjali Mukherjee",
     "role": "Owner, Bengal Bites",
-    "quote": "Simple yet powerful solution."
+    "quote": "Simple yet powerful solution.",
+    "rating": 4
   },
   {
     "id": 40,
     "name": "Jack Turner",
     "role": "Manager, Food Lounge",
-    "quote": "Works perfectly on mobile devices."
+    "quote": "Works perfectly on mobile devices.",
+    "rating": 4
   },
-
   {
     "id": 41,
     "name": "Farhan Ali",
     "role": "Owner, Kebab Kingdom",
-    "quote": "Online visibility improved drastically."
+    "quote": "Online visibility improved drastically.",
+    "rating": 4
   },
   {
     "id": 42,
     "name": "Grace Hall",
     "role": "Founder, Morning Brew",
-    "quote": "Our cafe finally feels digital-first."
+    "quote": "Our cafe finally feels digital-first.",
+    "rating": 5
   },
   {
     "id": 43,
     "name": "Aditya Chawla",
     "role": "Owner, Fast Feast",
-    "quote": "Setup took minutes, not days."
+    "quote": "Setup took minutes, not days.",
+    "rating": 4
   },
   {
     "id": 44,
     "name": "Henry Young",
     "role": "Owner, Diner Hub",
-    "quote": "Straightforward and effective."
+    "quote": "Straightforward and effective.",
+    "rating": 4
   },
   {
     "id": 45,
     "name": "Sneha Kulkarni",
     "role": "Owner, Healthy Bites",
-    "quote": "Perfect balance of design and usability."
+    "quote": "Perfect balance of design and usability.",
+    "rating": 4
   },
   {
     "id": 46,
     "name": "Owen King",
     "role": "Manager, Food Street",
-    "quote": "Very restaurant-friendly platform."
+    "quote": "Very restaurant-friendly platform.",
+    "rating": 5
   },
   {
     "id": 47,
     "name": "Kunal Arora",
     "role": "Founder, Wrap It Up",
-    "quote": "Helped us scale online orders."
+    "quote": "Helped us scale online orders.",
+    "rating": 4
   },
   {
     "id": 48,
     "name": "Natalie Perez",
     "role": "Owner, Casa Mexicana",
-    "quote": "Matches our brand vibe perfectly."
+    "quote": "Matches our brand vibe perfectly.",
+    "rating": 5
   },
   {
     "id": 49,
     "name": "Deepak Mishra",
     "role": "Owner, Quick Eats",
-    "quote": "Great experience from start to finish."
+    "quote": "Great experience from start to finish.",
+    "rating": 3
   },
   {
     "id": 50,
     "name": "Samuel Green",
     "role": "Owner, Farm Table",
-    "quote": "Our food looks great online now."
-  },
-
-  {
-    "id": 51,
-    "name": "Ritu Saxena",
-    "role": "Owner, Oven Fresh",
-    "quote": "Easy to update menus and prices."
-  },
-  {
-    "id": 52,
-    "name": "Anthony Baker",
-    "role": "Owner, Bread & Butter",
-    "quote": "Customers order more frequently now."
-  },
-  {
-    "id": 53,
-    "name": "Mohit Jain",
-    "role": "Founder, Meal Box",
-    "quote": "Helped us launch quickly."
-  },
-  {
-    "id": 54,
-    "name": "Chloe Adams",
-    "role": "Manager, Tea House",
-    "quote": "Clean design and smooth UX."
-  },
-  {
-    "id": 55,
-    "name": "Alok Tiwari",
-    "role": "Owner, Desi Treats",
-    "quote": "Perfect fit for Indian restaurants."
-  },
-  {
-    "id": 56,
-    "name": "Ryan Nelson",
-    "role": "Owner, Grill & Chill",
-    "quote": "No unnecessary features, just what we need."
-  },
-  {
-    "id": 57,
-    "name": "Sunita Reddy",
-    "role": "Founder, Millet Kitchen",
-    "quote": "Great for showcasing healthy menus."
-  },
-  {
-    "id": 58,
-    "name": "Peter Collins",
-    "role": "Owner, City Snacks",
-    "quote": "Boosted our online credibility."
-  },
-  {
-    "id": 59,
-    "name": "Harsh Vohra",
-    "role": "Owner, Midnight Bites",
-    "quote": "Late-night orders increased."
-  },
-  {
-    "id": 60,
-    "name": "Laura Bennett",
-    "role": "Owner, Sweet Cravings",
-    "quote": "Looks professional and inviting."
-  },
-
-  {
-    "id": 61,
-    "name": "Naveen Pillai",
-    "role": "Owner, Banana Leaf",
-    "quote": "Helped us attract new diners."
-  },
-  {
-    "id": 62,
-    "name": "Kevin Brooks",
-    "role": "Manager, Food Plaza",
-    "quote": "Very easy for staff to manage."
-  },
-  {
-    "id": 63,
-    "name": "Shalini Ghosh",
-    "role": "Owner, Home Taste",
-    "quote": "Feels tailor-made for restaurants."
-  },
-  {
-    "id": 64,
-    "name": "Aaron Price",
-    "role": "Owner, Street Burgers",
-    "quote": "Fast loading and reliable."
-  },
-  {
-    "id": 65,
-    "name": "Rohit Saxena",
-    "role": "Founder, Cloud Kitchen Co.",
-    "quote": "Perfect for delivery-first brands."
-  },
-  {
-    "id": 66,
-    "name": "Megan Foster",
-    "role": "Owner, Daily Dine",
-    "quote": "Our brand feels stronger online."
-  },
-  {
-    "id": 67,
-    "name": "Anup Das",
-    "role": "Owner, Eastern Delights",
-    "quote": "Helped us stand out locally."
-  },
-  {
-    "id": 68,
-    "name": "Justin Reed",
-    "role": "Manager, Corner Eats",
-    "quote": "Simple, fast, and reliable."
-  },
-  {
-    "id": 69,
-    "name": "Pankaj Arora",
-    "role": "Owner, Express Meals",
-    "quote": "Great value for money."
-  },
-  {
-    "id": 70,
-    "name": "Sophie Turner",
-    "role": "Founder, Smoothie Bar",
-    "quote": "Very clean and modern look."
-  },
-
-  {
-    "id": 71,
-    "name": "Vivek Sinha",
-    "role": "Owner, North Spice",
-    "quote": "Customers find our menu easily now."
-  },
-  {
-    "id": 72,
-    "name": "Mark Phillips",
-    "role": "Owner, Roast House",
-    "quote": "Works great on all devices."
-  },
-  {
-    "id": 73,
-    "name": "Ayesha Khan",
-    "role": "Founder, Flavor Box",
-    "quote": "Helped us launch without delays."
-  },
-  {
-    "id": 74,
-    "name": "Tom Richardson",
-    "role": "Manager, Food Yard",
-    "quote": "Very intuitive interface."
-  },
-  {
-    "id": 75,
-    "name": "Siddharth Roy",
-    "role": "Owner, City Tiffins",
-    "quote": "Excellent for daily meal services."
-  },
-  {
-    "id": 76,
-    "name": "Lucy Watson",
-    "role": "Owner, Dessert Lab",
-    "quote": "Showcases desserts beautifully."
-  },
-  {
-    "id": 77,
-    "name": "Gaurav Malhotra",
-    "role": "Owner, Urban Tandoor",
-    "quote": "Professional and reliable platform."
-  },
-  {
-    "id": 78,
-    "name": "Nathan Cook",
-    "role": "Owner, Cafe Central",
-    "quote": "Exactly what we were looking for."
-  },
-  {
-    "id": 79,
-    "name": "Rina Bose",
-    "role": "Founder, Spice & Soul",
-    "quote": "Matches our brand personality."
-  },
-  {
-    "id": 80,
-    "name": "Eric Morgan",
-    "role": "Owner, Lunch Box",
-    "quote": "Quick to launch and easy to run."
-  },
-
-  {
-    "id": 81,
-    "name": "Tarun Aggarwal",
-    "role": "Owner, Daily Thali",
-    "quote": "Helped us grow recurring orders."
-  },
-  {
-    "id": 82,
-    "name": "Victoria Hill",
-    "role": "Owner, Garden Cafe",
-    "quote": "Design feels fresh and welcoming."
-  },
-  {
-    "id": 83,
-    "name": "Imran Sheikh",
-    "role": "Owner, Grill Nation",
-    "quote": "Smooth experience from day one."
-  },
-  {
-    "id": 84,
-    "name": "Sean Murphy",
-    "role": "Manager, Food Court",
-    "quote": "Everything works as expected."
-  },
-  {
-    "id": 85,
-    "name": "Nandita Paul",
-    "role": "Founder, Plant Plate",
-    "quote": "Great for plant-based restaurants."
-  },
-  {
-    "id": 86,
-    "name": "Adam Lopez",
-    "role": "Owner, Fiesta Foods",
-    "quote": "Customers love the new website."
-  },
-  {
-    "id": 87,
-    "name": "Yogesh Patil",
-    "role": "Owner, Quick Curry",
-    "quote": "Easy to manage even during rush hours."
-  },
-  {
-    "id": 88,
-    "name": "Rachel Green",
-    "role": "Owner, City Sweets",
-    "quote": "Perfect showcase for our products."
-  },
-  {
-    "id": 89,
-    "name": "Amanpreet Singh",
-    "role": "Owner, Punjabi Rasoi",
-    "quote": "Simple and effective solution."
-  },
-  {
-    "id": 90,
-    "name": "Dylan Wright",
-    "role": "Founder, Meal Prep Pro",
-    "quote": "Helped us scale online fast."
-  },
-
-  {
-    "id": 91,
-    "name": "Shubham Verma",
-    "role": "Owner, Street Flavors",
-    "quote": "Great support and easy setup."
-  },
-  {
-    "id": 92,
-    "name": "Julia King",
-    "role": "Owner, Brunch Box",
-    "quote": "Looks amazing on mobile."
-  },
-  {
-    "id": 93,
-    "name": "Rakesh Yadav",
-    "role": "Owner, Desi Kitchen",
-    "quote": "Online orders increased steadily."
-  },
-  {
-    "id": 94,
-    "name": "Andrew Scott",
-    "role": "Manager, Food Point",
-    "quote": "Very dependable platform."
-  },
-  {
-    "id": 95,
-    "name": "Shreya Banerjee",
-    "role": "Founder, Urban Platter",
-    "quote": "Great for modern food brands."
-  },
-  {
-    "id": 96,
-    "name": "Paul Turner",
-    "role": "Owner, Dine Easy",
-    "quote": "Clean UI and fast performance."
-  },
-  {
-    "id": 97,
-    "name": "Karthik Subramanian",
-    "role": "Owner, Filter Coffee Bar",
-    "quote": "Perfect for cafes and small eateries."
-  },
-  {
-    "id": 98,
-    "name": "Monica Reyes",
-    "role": "Owner, Latin Bites",
-    "quote": "Helped us reach new customers."
-  },
-  {
-    "id": 99,
-    "name": "Rajeev Kapoor",
-    "role": "Owner, Grand Feast",
-    "quote": "Professional solution for serious businesses."
-  },
-  {
-    "id": 100,
-    "name": "William Scott",
-    "role": "Founder, Daily Eats",
-    "quote": "Highly recommended for restaurant owners."
+    "quote": "Our food looks great online now.",
+    "rating": 5
   }
 ]
