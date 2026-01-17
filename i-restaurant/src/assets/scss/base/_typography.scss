@@ -1,27 +1,33 @@
+/* ===============================
+   Premium Typography
+================================ */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.2;
   color: var(--color-black);
+  letter-spacing: -0.02em;
 }
 
 /* Headings */
 h1 {
-  font-size: clamp(2.5rem, 4vw, 3.25rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(2.75rem, 5vw, 4rem);
+  letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: clamp(2rem, 3vw, 2.5rem);
-  letter-spacing: -0.015em;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  letter-spacing: -0.025em;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h4 {
@@ -39,22 +45,52 @@ h6 {
 /* Body text */
 p {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-gray-700);
 }
 
-/* Secondary text */
+/* Large text */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Small text */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Muted text */
 .text-muted {
   color: var(--color-gray-500);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Links inside content */
 p a {
   color: var(--color-primary);
-  text-decoration: underline;
-  transition: var(--transition-base);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  border-bottom: 1px solid transparent;
 
   &:hover {
     color: var(--color-primary-dark);
+    border-bottom-color: var(--color-primary-dark);
   }
+}
+
+/* Lead paragraph */
+.lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--color-gray-700);
 }
