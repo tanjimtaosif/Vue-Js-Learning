@@ -49,10 +49,22 @@
     var(--color-primary) 0%,
     var(--color-primary-dark) 100%
   );
-  --gradient-hero: linear-gradient(180deg, #ffffff 0%, #cecef6 35%, #c1bff9 65%, #d6d5fc 100%);
+  /* Premium Mesh Gradient */
+  --gradient-mesh:
+    radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+
+  --gradient-hero-premium:
+    radial-gradient(circle at 15% 50%, rgba(108, 77, 255, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(255, 107, 157, 0.08), transparent 25%);
+
   --gradient-glass: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.9) 0%,
     rgba(255, 255, 255, 0.7) 100%
   );
+
+  /* Surfaces */
+  --color-surface-subtle: #f8f9fc;
 }
