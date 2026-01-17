@@ -13,6 +13,10 @@
     overflow: visible; /* CRITICAL: Allows preview to overlap next section */
     z-index: 2;
 
+    @media (max-width: 768px) {
+      padding: 4rem 0 0;
+    }
+
     /* Restored Curved Gradient Background with Smoother Transition */
     &::before {
       content: '';
@@ -142,6 +146,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -151,15 +159,18 @@
   background-color: var(--color-gray-100);
   border-radius: var(--border-radius-md);
   min-height: 280px; /* Balanced height: not too congested, not too empty */
-  position: relative;
-  overflow: hidden;
 
-  /* Content needs to be above visuals */
   &__content {
+    /* Padding removed to fix double-padding issue (parent has 2.5rem) */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Ensure text fits */
     position: relative;
     z-index: 2;
     max-width: 85%; /* Ensure text doesn't overlap visuals too much on small screens */
   }
+  position: relative;
+  overflow: hidden;
 
   /* ... rest of existing styles ... */
 
@@ -243,6 +254,22 @@
   /* Wide card (top left) */
   &--wide {
     grid-column: span 2;
+
+    @media (max-width: 1000px) {
+      grid-column: span 1;
+    }
+  }
+
+  /* Publish Card (Fix for overlap) */
+  &--publish {
+    .feature__content {
+      max-width: 55%; /* Wrap text early to avoid intersecting the visual */
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        padding-bottom: 8rem; /* Push visually clear of the bottom element */
+      }
+    }
   }
 
   /* Highlight card (top right) */
@@ -250,9 +277,26 @@
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     color: var(--color-white);
 
+    /* Corner Glow */
+    &::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .feature__title,
     .feature__text {
       color: var(--color-white);
+      position: relative;
+      z-index: 2;
     }
 
     .feature__visual--ai .ai-chip {
@@ -274,6 +318,18 @@
     height: 100%;
     pointer-events: none;
     z-index: 1;
+  }
+
+  /* Interactive Elements Container - Scale on Mobile */
+  .visual-internal {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    @media (max-width: 600px) {
+      transform: scale(0.85); /* Scale down complex visuals */
+      transform-origin: center center;
+    }
   }
 
   /*
@@ -738,11 +794,20 @@
 
   /* TABLE */
 
+  &__scroll-wrapper {
+    overflow-x: auto;
+    padding-bottom: 5rem; /* Increased to fit the large shadow (24px + 60px blur) */
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1.5rem -2rem; /* Negative bottom margin to counteract extra padding layout shift */
+    padding: 0 1.5rem 5rem; /* Compensate padding */
+  }
+
   &__table {
     display: grid;
     grid-template-columns: 1.4fr 1.35fr 1fr 1fr; // middle column wider
     gap: 1.5rem;
     align-items: stretch;
+    min-width: 800px; /* Force scroll on small screens */
   }
 
   &__column {
@@ -763,6 +828,22 @@
       color: var(--color-white);
       box-shadow: 0 24px 60px rgba(108, 77, 255, 0.35);
       padding: 0.75rem 0; // taller, not popped
+      position: relative; /* For the glow */
+      overflow: hidden;
+
+      /* Corner Glow */
+      &::before {
+        content: '';
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
+        border-radius: 50%;
+        filter: blur(20px);
+        pointer-events: none;
+      }
     }
   }
 
@@ -867,6 +948,12 @@
   &__item {
     flex: 0 0 auto;
     width: 720px;
+
+    /* Responsive: Show peeking slide on mobile */
+    @media (max-width: 768px) {
+      width: 85vw; /* Shows most of the slide + hints next one */
+    }
+
     aspect-ratio: 16 / 9;
     border-radius: 22px;
     overflow: hidden;
@@ -990,7 +1077,12 @@
   padding: 2.5rem;
   border-radius: var(--border-radius-md);
 
-  width: 400px; /* Fixed width */
+  width: 400px; /* Fixed width on desktop */
+
+  @media (max-width: 768px) {
+    width: 85vw; /* Responsive on mobile */
+    padding: 1.75rem; /* Reduced padding */
+  }
   flex-shrink: 0;
   height: auto; /* Let flex stretch handle the height */
   min-height: 100%; /* Ensure it fills the parent if parent has height */
