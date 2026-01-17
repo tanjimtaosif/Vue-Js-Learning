@@ -1,22 +1,26 @@
 <script setup lang="ts">
-import BaseContainer from '../base/BaseContainer.vue'
+import BaseContainer from '@/components/base/BaseContainer.vue'
+import { useUiStore } from '@/stores/ui.store'
+import { useHeaderScroll } from '@/composables/useScroll'
+
+const uiStore = useUiStore()
+useHeaderScroll(80)
 </script>
 
 <template>
-  <header class="app-header">
+  <header class="app-header" :class="{ 'app-header--sticky': uiStore.isHeaderSticky }">
     <BaseContainer>
       <div class="app-header__content">
         <!-- Logo -->
-        <div class="app-header__logo">
-          Irestaurant
-        </div>
+        <div class="app-header__logo">Irestaurant</div>
 
         <!-- Navigation -->
         <nav class="app-header__nav">
-          <a href="#">Features</a>
-          <a href="#">Pricing</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/features">Features</RouterLink>
+          <RouterLink to="/pricing">Pricing</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
         </nav>
 
         <!-- Actions -->
