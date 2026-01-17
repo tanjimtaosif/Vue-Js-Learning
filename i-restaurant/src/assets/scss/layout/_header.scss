@@ -32,6 +32,10 @@
     display: flex;
     gap: 2rem;
 
+    @media (max-width: 900px) {
+      display: none;
+    }
+
     a {
       font-size: 0.95rem;
       color: var(--color-gray-700);
@@ -50,6 +54,79 @@
   &__actions {
     display: flex;
     gap: 1rem;
+  }
+
+  /* Mobile Toggle */
+  &__toggle {
+    display: none;
+    padding: 0.5rem;
+    color: var(--color-black);
+
+    @media (max-width: 900px) {
+      display: block;
+      position: relative;
+      z-index: 60; /* Above menu */
+    }
+  }
+
+  /* Mobile Menu Overlay */
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 55;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &.is-open {
+      transform: translateY(0);
+    }
+
+    @media (min-width: 901px) {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+
+      a {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--color-black);
+      }
+    }
+
+    .mobile-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: auto;
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  /* Desktop Elements Hiding */
+  &__nav,
+  &__actions {
+    @media (max-width: 900px) {
+      display: none;
+    }
   }
 
   /* ===============================
