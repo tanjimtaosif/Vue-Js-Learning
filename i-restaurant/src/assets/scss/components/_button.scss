@@ -38,6 +38,12 @@
     width: 300px;
     height: 300px;
   }
+
+  /* Responsive Sizing */
+  @media (max-width: 768px) {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* Primary Button */
@@ -90,12 +96,22 @@
   padding: 1.1rem 2.25rem;
   font-size: 1rem;
   border-radius: var(--border-radius-lg);
+
+  @media (max-width: 768px) {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.95rem;
+  }
 }
 
 /* Small Button */
 .btn--sm {
   padding: 0.6rem 1.25rem;
   font-size: 0.85rem;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* Icon Button */
