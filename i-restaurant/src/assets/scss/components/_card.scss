@@ -1,0 +1,67 @@
+/* ===============================
+   Premium Card Styles
+================================ */
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+
+  /* Subtle border */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Glass Card */
+.card--glass {
+  background: var(--gradient-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Elevated Card */
+.card--elevated {
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+/* Gradient Border Card */
+.card--gradient-border {
+  background:
+    linear-gradient(var(--color-white), var(--color-white)) padding-box,
+    var(--gradient-primary) border-box;
+  border: 2px solid transparent;
+}
+
+/* Interactive Card */
+.card--interactive {
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 0;
+  }
+
+  &:hover::after {
+    opacity: 0.03;
+  }
+}
