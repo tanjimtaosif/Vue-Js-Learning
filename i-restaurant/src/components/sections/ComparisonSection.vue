@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import BaseContainer from '../base/BaseContainer.vue'
 import { Check, X } from 'lucide-vue-next'
+import { useScrollReveal } from '@/composables/useScrollReveal'
+
+useScrollReveal()
 </script>
 
 <template>
   <section class="comparison">
     <BaseContainer>
       <!-- Header -->
-      <div class="comparison__header">
+      <div class="comparison__header reveal-on-scroll">
         <span class="comparison__pill">Comparison</span>
 
         <h2 class="comparison__title">
@@ -22,7 +25,7 @@ import { Check, X } from 'lucide-vue-next'
       </div>
 
       <!-- Table -->
-      <div class="comparison__table">
+      <div class="comparison__table reveal-on-scroll delay-100">
         <!-- Feature names -->
         <div class="comparison__column comparison__column--labels">
           <div class="comparison__cell">Visual Builder</div>
