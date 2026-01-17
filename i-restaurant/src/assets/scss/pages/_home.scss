@@ -79,13 +79,13 @@
 // Featured section
 
 .features-showcase {
-  padding: 12rem 0 5rem;
+  padding: 12rem 0 7rem;
   background-color: var(--color-white);
   position: relative;
 
   &__header {
     max-width: 720px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 4rem;
     text-align: center;
   }
 
@@ -162,7 +162,7 @@
 
   &__header {
     max-width: 720px;
-    margin: 0 auto 5rem;
+    margin: 0 auto 4rem;
     text-align: center;
   }
 
@@ -189,9 +189,7 @@
     color: var(--color-gray-700);
   }
 
-  /* =========================
-     TABLE
-     ========================= */
+  /* TABLE */
 
   &__table {
     display: grid;
@@ -344,9 +342,7 @@
   }
 }
 
-/* =========================
-   ANIMATION
-   ========================= */
+/*  ANIMATION */
 
 @keyframes gallery-scroll {
   from {
@@ -362,7 +358,7 @@
   animation-play-state: paused;
 }
 
-/* Testimonials */
+/* Testimonials Section */
 
 .testimonials {
   padding: 7rem 0;
@@ -388,6 +384,7 @@
   &__title {
     font-size: clamp(2.2rem, 4vw, 3rem);
     margin-bottom: 1rem;
+    color: var(--color-black);
   }
 
   &__subtitle {
@@ -395,50 +392,57 @@
     color: var(--color-gray-700);
   }
 
-  /* Slider */
+  /* Marquee Layout */
 
   &__slider {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    margin: -10px 0;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
 
   &__track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    flex: 1;
-    align-items: stretch;
-  }
-
-  &__nav {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--color-gray-100);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.25s ease;
-    color: var(--color-black);
+    align-items: stretch; /* Ensure all items stretch to the tallest height */
+    gap: 2rem;
+    width: max-content;
+    animation: testimonial-scroll 300s linear infinite;
+    will-change: transform;
+    padding-bottom: 50px; /* Space for shadow */
 
-    &:hover:not(:disabled) {
-      background-color: rgba(108, 77, 255, 0.15);
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
+    &:hover {
+      animation-play-state: paused;
     }
   }
 }
 
-/* Card */
+/* Scroll Animation */
+@keyframes testimonial-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Testimonial Card */
 
 .testimonial {
   background-color: var(--color-gray-100);
   padding: 2.5rem;
   border-radius: var(--border-radius-md);
+
+  width: 400px; /* Fixed width */
+  flex-shrink: 0;
+  height: auto; /* Let flex stretch handle the height */
+  min-height: 100%; /* Ensure it fills the parent if parent has height */
+  display: flex;
+  flex-direction: column;
+
+  will-change: transform, box-shadow;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -458,13 +462,16 @@
   &__quote {
     font-size: 1rem;
     line-height: 1.7;
+    flex-grow: 1;
     margin-bottom: 2rem;
+    color: var(--color-black);
   }
 
   &__author {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-top: auto;
   }
 
   &__avatar {
@@ -477,14 +484,57 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+    flex-shrink: 0;
   }
 
   &__name {
     font-weight: 600;
+    color: var(--color-black);
   }
 
   &__role {
     font-size: 0.85rem;
     color: var(--color-gray-700);
+  }
+}
+
+// CTA Section
+
+.cta {
+  padding: 7rem 0;
+  background-color: var(--color-white);
+
+  &__box {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 4.5rem 3rem;
+    text-align: center;
+
+    border-radius: var(--border-radius-lg);
+    background: linear-gradient(180deg, #f6f4ff 0%, #ebe7ff 50%, #ffffff 100%);
+
+    box-shadow: 0 40px 100px rgba(108, 77, 255, 0.18);
+  }
+
+  &__title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--color-black);
+  }
+
+  &__text {
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-gray-700);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }

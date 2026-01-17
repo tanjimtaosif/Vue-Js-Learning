@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import BaseContainer from '@/components/base/BaseContainer.vue'
-import { ChevronLeft, ChevronRight, Star } from 'lucide-vue-next'
+import { Star } from 'lucide-vue-next'
 
 interface Testimonial {
   id: number
@@ -12,34 +12,17 @@ interface Testimonial {
 }
 
 const testimonials = ref<Testimonial[]>([])
-const currentPage = ref(0)
-const itemsPerPage = 3
-
-const totalPages = computed(() => Math.ceil(testimonials.value.length / itemsPerPage))
-
-const visibleTestimonials = computed(() => {
-  const start = currentPage.value * itemsPerPage
-  return testimonials.value.slice(start, start + itemsPerPage)
-})
-
-function nextPage() {
-  if (currentPage.value < totalPages.value - 1) {
-    currentPage.value++
-  }
-}
-
-function prevPage() {
-  if (currentPage.value > 0) {
-    currentPage.value--
-  }
-}
 
 onMounted(async () => {
   try {
-    const res = await fetch('/data/testimonials.json')
-    testimonials.value = await res.json()
-  } catch (err) {
-    console.error('Failed to load testimonials', err)
+    const res = await fetch(`/data/testimonials.json?v=${Date.now()}`)
+    if (res.ok) {
+      testimonials.value = await res.json()
+    } else {
+      console.error('Failed to load testimonials')
+    }
+  } catch (error) {
+    console.error(error)
   }
 })
 </script>
@@ -54,16 +37,42 @@ onMounted(async () => {
         <p class="testimonials__subtitle">Feedback from restaurants using Irestaurant worldwide.</p>
       </div>
 
-      <!-- Slider -->
-      <div class="testimonials__slider">
-        <button class="testimonials__nav" :disabled="currentPage === 0" @click="prevPage">
-          <ChevronLeft :size="20" />
-        </button>
-
+      <!-- Marquee Slider -->
+      <div class="testimonials__slider" v-if="testimonials.length">
         <div class="testimonials__track">
-          <div v-for="item in visibleTestimonials" :key="item.id" class="testimonial">
+          <!-- First Set -->
+          <div v-for="item in testimonials" :key="`first-${item.id}`" class="testimonial">
             <div class="testimonial__rating">
-              <Star v-for="n in item.rating" :key="n" :size="16" fill="currentColor" />
+              <Star
+                v-for="n in 5"
+                :key="n"
+                :size="16"
+                :fill="n <= item.rating ? 'currentColor' : 'none'"
+              />
+            </div>
+
+            <p class="testimonial__quote">“{{ item.quote }}”</p>
+
+            <div class="testimonial__author">
+              <div class="testimonial__avatar">
+                {{ item.name.charAt(0) }}
+              </div>
+              <div>
+                <div class="testimonial__name">{{ item.name }}</div>
+                <div class="testimonial__role">{{ item.role }}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Set (Duplicate for seamless loop) -->
+          <div v-for="item in testimonials" :key="`second-${item.id}`" class="testimonial">
+            <div class="testimonial__rating">
+              <Star
+                v-for="n in 5"
+                :key="n"
+                :size="16"
+                :fill="n <= (item.rating || 5) ? 'currentColor' : 'none'"
+              />
             </div>
 
             <p class="testimonial__quote">“{{ item.quote }}”</p>
@@ -79,14 +88,6 @@ onMounted(async () => {
             </div>
           </div>
         </div>
-
-        <button
-          class="testimonials__nav"
-          :disabled="currentPage === totalPages - 1"
-          @click="nextPage"
-        >
-          <ChevronRight :size="20" />
-        </button>
       </div>
     </BaseContainer>
   </section>
