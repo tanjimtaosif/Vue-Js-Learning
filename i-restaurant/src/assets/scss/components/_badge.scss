@@ -1,0 +1,55 @@
+/* ===============================
+   Premium Badge/Pill Styles
+================================ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  transition: var(--transition-fast);
+}
+
+/* Primary Badge */
+.badge--primary {
+  background: rgba(108, 77, 255, 0.12);
+  color: var(--color-primary);
+
+  &:hover {
+    background: rgba(108, 77, 255, 0.18);
+  }
+}
+
+/* Success Badge */
+.badge--success {
+  background: rgba(76, 175, 80, 0.12);
+  color: #2e7d32;
+}
+
+/* Warning Badge */
+.badge--warning {
+  background: rgba(255, 152, 0, 0.12);
+  color: #e65100;
+}
+
+/* Outline Badge */
+.badge--outline {
+  background: transparent;
+  border: 1.5px solid var(--color-gray-200);
+  color: var(--color-gray-700);
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+/* Gradient Badge */
+.badge--gradient {
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
