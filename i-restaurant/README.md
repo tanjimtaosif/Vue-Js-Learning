@@ -1,48 +1,93 @@
-# i-restaurant
+# Irestaurant
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, high-converting website template built specifically for restaurants. Launch faster, convert more customers, and manage everything without technical complexity.
 
-## Recommended IDE Setup
+## ✨ Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Hero Section** – Eye-catching introduction with video preview
+- **Features Showcase** – Highlight key platform benefits
+- **Comparison Table** – Side-by-side competitor comparison
+- **Gallery** – Infinite scrolling image carousel with hover pause
+- **Testimonials** – Infinite scrolling customer reviews with ratings
+- **CTA Section** – Conversion-focused call-to-action block
+- **Responsive Footer** – Brand info, navigation links, and social media
 
-## Recommended Browser Setup
+## 🛠️ Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Vue 3** – Composition API with `<script setup>`
+- **TypeScript** – Type-safe development
+- **Vite** – Fast development and build tooling
+- **Pinia** – State management
+- **Vue Router** – Client-side routing
+- **SCSS** – Modular styling with BEM methodology
+- **Lucide Icons** – Beautiful open-source icons
 
-## Type Support for `.vue` Imports in TS
+## 📁 Project Structure
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+```
+src/
+├── assets/scss/       # Global styles (base, layout, components, pages)
+├── components/
+│   ├── base/          # Reusable base components (BaseContainer, BaseButton)
+│   ├── layout/        # Layout components (AppHeader, AppFooter)
+│   └── sections/      # Page sections (HeroSection, FeaturesSection, etc.)
+├── pages/             # Route views (HomeView, AboutView, etc.)
+├── router/            # Vue Router configuration
+├── stores/            # Pinia stores
+└── public/data/       # Static JSON data (testimonials.json)
+```
 
-## Customize configuration
+## 🚀 Getting Started
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Prerequisites
 
-## Project Setup
+- Node.js v20.19+ or v22.12+
+- pnpm
+
+### Installation
 
 ```sh
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Production Build
 
 ```sh
 pnpm build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Linting
 
 ```sh
 pnpm lint
 ```
+
+## 🎨 Design System
+
+The project uses CSS custom properties for theming:
+
+- `--color-primary` / `--color-primary-dark` – Brand purple
+- `--color-black` / `--color-white` – Neutral extremes
+- `--color-gray-100` to `--color-gray-700` – Gray scale
+- `--border-radius-md` / `--border-radius-lg` – Consistent rounding
+- `--container-width` – Max content width
+
+## 📄 Pages
+
+| Route       | Component    | Description          |
+| ----------- | ------------ | -------------------- |
+| `/`         | HomeView     | Landing page         |
+| `/features` | FeaturesView | Features detail page |
+| `/pricing`  | PricingView  | Pricing plans        |
+| `/about`    | AboutView    | About the company    |
+| `/contact`  | ContactView  | Contact form         |
+
+## 📝 License
+
+© 2026 Irestaurant. All rights reserved.
