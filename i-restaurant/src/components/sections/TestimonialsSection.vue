@@ -13,80 +13,54 @@ interface Testimonial {
 
 const testimonials = ref<Testimonial[]>([])
 
-onMounted(async () => {
+async function fetchTestimonials() {
   try {
-    const res = await fetch(`/data/testimonials.json?v=${Date.now()}`)
+    const res = await fetch('/data/testimonials.json')
     if (res.ok) {
       testimonials.value = await res.json()
-    } else {
-      console.error('Failed to load testimonials')
     }
   } catch (error) {
-    console.error(error)
+    console.error('Failed to load testimonials:', error)
   }
-})
+}
+
+onMounted(fetchTestimonials)
 </script>
 
 <template>
   <section class="testimonials">
     <BaseContainer>
-      <!-- Header -->
+      <!-- Section Header -->
       <div class="testimonials__header">
         <span class="testimonials__pill">Testimonials</span>
         <h2 class="testimonials__title">Loved by Restaurant Owners</h2>
         <p class="testimonials__subtitle">Feedback from restaurants using Irestaurant worldwide.</p>
       </div>
 
-      <!-- Marquee Slider -->
-      <div class="testimonials__slider" v-if="testimonials.length">
+      <!-- Infinite Marquee Slider -->
+      <div v-if="testimonials.length" class="testimonials__slider">
         <div class="testimonials__track">
-          <!-- First Set -->
-          <div v-for="item in testimonials" :key="`first-${item.id}`" class="testimonial">
-            <div class="testimonial__rating">
-              <Star
-                v-for="n in 5"
-                :key="n"
-                :size="16"
-                :fill="n <= item.rating ? 'currentColor' : 'none'"
-              />
-            </div>
-
-            <p class="testimonial__quote">“{{ item.quote }}”</p>
-
-            <div class="testimonial__author">
-              <div class="testimonial__avatar">
-                {{ item.name.charAt(0) }}
+          <!-- Render testimonials twice for seamless infinite scroll -->
+          <template v-for="(item, index) in [...testimonials, ...testimonials]" :key="index">
+            <article class="testimonial">
+              <div class="testimonial__rating">
+                <Star
+                  v-for="star in 5"
+                  :key="star"
+                  :size="16"
+                  :fill="star <= item.rating ? 'currentColor' : 'none'"
+                />
               </div>
-              <div>
-                <div class="testimonial__name">{{ item.name }}</div>
-                <div class="testimonial__role">{{ item.role }}</div>
+              <p class="testimonial__quote">"{{ item.quote }}"</p>
+              <div class="testimonial__author">
+                <div class="testimonial__avatar">{{ item.name.charAt(0) }}</div>
+                <div>
+                  <div class="testimonial__name">{{ item.name }}</div>
+                  <div class="testimonial__role">{{ item.role }}</div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Second Set (Duplicate for seamless loop) -->
-          <div v-for="item in testimonials" :key="`second-${item.id}`" class="testimonial">
-            <div class="testimonial__rating">
-              <Star
-                v-for="n in 5"
-                :key="n"
-                :size="16"
-                :fill="n <= (item.rating || 5) ? 'currentColor' : 'none'"
-              />
-            </div>
-
-            <p class="testimonial__quote">“{{ item.quote }}”</p>
-
-            <div class="testimonial__author">
-              <div class="testimonial__avatar">
-                {{ item.name.charAt(0) }}
-              </div>
-              <div>
-                <div class="testimonial__name">{{ item.name }}</div>
-                <div class="testimonial__role">{{ item.role }}</div>
-              </div>
-            </div>
-          </div>
+            </article>
+          </template>
         </div>
       </div>
     </BaseContainer>
