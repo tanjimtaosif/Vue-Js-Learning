@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import BaseContainer from '@/components/base/BaseContainer.vue'
+import { useScrollReveal } from '@/composables/useScrollReveal'
+
+useScrollReveal()
 
 const projects = [
   { id: 1, image: '/images/gallery/app-1.png' },
@@ -15,7 +18,7 @@ const projects = [
   <section class="gallery">
     <BaseContainer>
       <!-- Header -->
-      <div class="gallery__header">
+      <div class="gallery__header reveal-on-scroll">
         <span class="gallery__pill">Gallery</span>
         <h2 class="gallery__title">Websites Built with Irestaurant</h2>
         <p class="gallery__subtitle">Explore real restaurant websites built using our platform.</p>
@@ -23,7 +26,7 @@ const projects = [
     </BaseContainer>
 
     <!-- Infinite Carousel -->
-    <div class="gallery__carousel">
+    <div class="gallery__carousel reveal-on-scroll delay-200">
       <div class="gallery__track">
         <div
           v-for="(project, index) in [...projects, ...projects]"
