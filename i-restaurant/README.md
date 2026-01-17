@@ -4,6 +4,8 @@ A modern, high-converting website template built specifically for restaurants. L
 
 ## ✨ Features
 
+- **Premium UI/UX** – Glassmorphism effects, smooth gradients, and micro-interactions
+- **Sticky Header** – Smart navigation with frosted glass effect
 - **Hero Section** – Eye-catching introduction with video preview
 - **Features Showcase** – Highlight key platform benefits
 - **Comparison Table** – Side-by-side competitor comparison
@@ -70,13 +72,18 @@ pnpm lint
 
 ## 🎨 Design System
 
-The project uses CSS custom properties for theming:
+The project uses a premium design system with CSS custom properties:
 
-- `--color-primary` / `--color-primary-dark` – Brand purple
-- `--color-black` / `--color-white` – Neutral extremes
-- `--color-gray-100` to `--color-gray-700` – Gray scale
-- `--border-radius-md` / `--border-radius-lg` – Consistent rounding
-- `--container-width` – Max content width
+- **Colors**: Curated palette with `--color-primary` (Purple), `--color-accent` (Pink), and refined neutrals.
+- **Typography**: `Inter` font with optimized letter-spacing and fluid font sizes.
+- **Effects**:
+  - `Glassmorphism`: Backdrop blur and translucent backgrounds.
+  - `Gradients`: Smooth color transitions for buttons and borders.
+  - `Shadows`: Multi-layered shadows for depth (`--shadow-lg`, `--shadow-glow`).
+- **Components**:
+  - `Buttons`: Ripple effects, hover lifts, and gradient variants.
+  - `Cards`: Elevated, glass, and interactive states.
+  - `Badges`: Status indicators with pill shaping.
 
 ## 📄 Pages
 
