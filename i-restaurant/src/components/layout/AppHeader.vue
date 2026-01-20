@@ -5,6 +5,8 @@ import { useUiStore } from '@/stores/ui.store'
 import { useHeaderScroll } from '@/composables/useScroll'
 import { Menu, X } from 'lucide-vue-next'
 
+import logo from '@/assets/images/logo/logo-i-restaurant.png'
+
 const uiStore = useUiStore()
 const isMenuOpen = ref(false)
 useHeaderScroll(80)
@@ -20,7 +22,9 @@ const toggleMenu = () => {
     <BaseContainer>
       <div class="app-header__content">
         <!-- Logo -->
-        <div class="app-header__logo">Irestaurant</div>
+        <div class="app-header__logo">
+          <img :src="logo" alt="Logo" />
+        </div>
 
         <!-- Desktop Navigation -->
         <nav class="app-header__nav">
