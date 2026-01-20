@@ -109,7 +109,7 @@
 // Featured section
 
 .features-showcase {
-  padding: 12rem 0 7rem;
+  padding: 16rem 0 7rem;
   background-color: var(--color-white);
   position: relative;
 
@@ -1004,7 +1004,7 @@
 
 .testimonials {
   padding: 7rem 0;
-  background-color: var(--color-white);
+  background-color: var(--color-surface-subtle);
 
   &__header {
     max-width: 720px;
@@ -1295,4 +1295,26 @@
   100% {
     transform: translateY(-15px);
   }
+}
+
+// Animation Utility Classes
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+
+  &.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
 }

@@ -22,10 +22,14 @@
   }
 
   &__logo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--color-black);
-    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
   }
 
   &__nav {
@@ -44,9 +48,15 @@
       padding: 0.5rem 1rem;
       border-radius: 99px;
 
-      &:hover {
+      &:hover,
+      &.router-link-active {
         color: var(--color-primary);
         background-color: rgba(108, 77, 255, 0.05);
+      }
+
+      &.router-link-active {
+        font-weight: 600;
+        background-color: rgba(108, 77, 255, 0.08); /* Slightly stronger for active */
       }
     }
   }
