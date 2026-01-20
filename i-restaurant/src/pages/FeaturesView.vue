@@ -1,7 +1,7 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+import FeaturesGridSection from '@/components/sections/features/FeaturesGridSection.vue'
+</script>
+
 <template>
-  <section>
-    <h1>Features</h1>
-    <p>Everything you need to build a high-converting restaurant website.</p>
-  </section>
+  <FeaturesGridSection />
 </template>
