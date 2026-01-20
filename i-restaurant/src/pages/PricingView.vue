@@ -1,7 +1,9 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+import PricingPlans from '@/components/sections/pricing/PricingPlans.vue'
+import PricingFaq from '@/components/sections/pricing/PricingFaq.vue'
+</script>
+
 <template>
-  <section>
-    <h1>Pricing</h1>
-    <p>Simple, transparent pricing.</p>
-  </section>
+  <PricingPlans />
+  <PricingFaq />
 </template>
